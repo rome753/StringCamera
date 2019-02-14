@@ -1,11 +1,16 @@
 package com.example.android.camera2basic;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.media.Image;
+import android.media.ImageReader;
 import android.os.Handler;
 import android.os.Message;
 import android.view.TextureView;
 import android.widget.TextView;
+
+import java.nio.ByteBuffer;
 
 /**
  * Created by chao on 2019/2/13.
@@ -28,6 +33,29 @@ public class Utils {
             }
         };
         handler.sendEmptyMessage(0);
+    }
+
+    public static Bitmap imageReader2Bitmap(ImageReader imageReader) {
+        Image image = null;
+        ByteBuffer buffer = null;
+
+        try {
+            image = imageReader.acquireNextImage();
+            buffer = image.getPlanes()[0].getBuffer();
+            byte[] bytes = new byte[buffer.remaining()];
+            buffer.get(bytes);
+            return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if(buffer != null) {
+                buffer.clear();
+            }
+            if(image != null) {
+                image.close();
+            }
+        }
+        return null;
     }
 
     public static String bitmap2string(Bitmap bitmap) {
