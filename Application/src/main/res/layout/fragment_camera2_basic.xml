@@ -51,4 +51,13 @@
 
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/text"
+        android:background="@android:color/black"
+        android:textSize="3sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
