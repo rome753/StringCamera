@@ -11,7 +11,7 @@ StringCamera
 -----
 
 
-![截图](https://github.com/rome753/StringCamera/blob/master/screenshots/Screenshot_20190214-111332.png)
+![截图](https://github.com/rome753/StringCamera/blob/master/screenshots/IMG_20190303_000022.jpg)
 
 
 License
