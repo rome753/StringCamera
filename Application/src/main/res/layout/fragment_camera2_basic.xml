@@ -53,9 +53,9 @@
 
     <TextView
         android:id="@+id/text"
-        android:background="@android:color/black"
+        android:background="@android:color/white"
         android:textSize="3sp"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

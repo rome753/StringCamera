@@ -73,7 +73,7 @@ public class Utils {
     }
 
 //    private static char[] sChars = " .,:;i1tfLCG08@".toCharArray();
-    private static char[] sChars = "　一十大木本米菜数簇龍龘".toCharArray();
+    private static char[] sChars = "龘龍簇数菜米本木十大一　".toCharArray();
 
     public static Character color2char(int color) {
         int red = Color.red(color);
