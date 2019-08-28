@@ -213,11 +213,13 @@ public class StringCameraFragment extends Fragment
         @Override
         public void onImageAvailable(ImageReader reader) {
             final String s = Utils.yuv2string(reader);
-            if(s != null) {
+            if(s != null && imageView != null) {
                 imageView.post(new Runnable() {
                     @Override
                     public void run() {
-                        textView.setText(s);
+                        if(textView != null){
+                            textView.setText(s);
+                        }
                     }
                 });
             }
